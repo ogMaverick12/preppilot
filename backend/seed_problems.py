@@ -1,5 +1,5 @@
 """
-Seed Problems Script -- Populates the database with 50 algorithmic problems.
+Seed Problems Script -- Populates the local database with the shared problem bank.
 Run: python -m backend.seed_problems
 """
 import asyncio

@@ -47,6 +47,7 @@ The submission post uses real local screenshots from:
 - `docs/images/login_local_profiles.png`
 - `docs/images/dashboard_assessment.png`
 - `docs/images/problem_bank_208.png`
+- `docs/images/problem_card_solve.png`
 - `docs/images/solve_workspace.png`
 - `docs/images/hermes_review.png`
 - `docs/images/custom_problem.png`

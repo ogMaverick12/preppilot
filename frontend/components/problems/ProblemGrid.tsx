@@ -106,6 +106,7 @@ export default function ProblemGrid() {
   const startProblem = useStartProblem()
   const { data, isLoading } = useProblems({ topic: topicFilter !== 'all' ? topicFilter : undefined, difficulty: diffFilter !== 'all' ? diffFilter : undefined, status: statusFilter !== 'all' ? statusFilter : undefined, user_id: user?.id, per_page: 100 })
   const problems = (data?.problems || []) as ProblemData[]
+  const totalProblems = data?.total ?? problems.length
 
   function solveSelected() {
     if (!selected || !user?.id) return
@@ -127,7 +128,7 @@ export default function ProblemGrid() {
         <div className="flex gap-1 bg-[#1c1c1f] rounded-lg p-1">
           {[['all','All'],['solved','Solved'],['attempted','Attempted'],['unseen','Unseen']].map(([v,l]) => <button key={v} onClick={() => setStatusFilter(v)} className={cn('px-3 py-1 text-[11px] rounded-md font-medium transition-all', statusFilter === v ? 'bg-[#27272a] text-[#fafafa]' : 'text-[#52525b] hover:text-[#a1a1aa]')}>{l}</button>)}
         </div>
-        <span className="text-[13px] text-[#52525b] ml-auto">{isLoading ? '...' : `${problems.length} problems`}</span>
+        <span className="text-[13px] text-[#52525b] ml-auto">{isLoading ? '...' : `${totalProblems} problems`}</span>
       </div>
       {isLoading ? (
         <div className="flex items-center justify-center py-16"><div className="w-6 h-6 border-2 border-[#f59e0b] border-t-transparent rounded-full animate-spin" /></div>

@@ -101,8 +101,8 @@ async def _call_llm(
     max_tokens: int = 1500,
 ) -> Optional[str]:
     """
-    Call the optional hosted LLM provider via OpenRouter. This is the single
-    point of hosted model access for PrepPilot.
+    Call the optional external LLM provider via OpenRouter. This is the single
+    point of external model access for PrepPilot.
 
     Returns the LLM response text, or None if the call fails or no real API key
     is configured. The caller then uses Hermes' local heuristic path.

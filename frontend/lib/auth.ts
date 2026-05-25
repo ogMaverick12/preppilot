@@ -34,13 +34,6 @@ export function useAuth() {
   }
 }
 
-/**
- * Login with a specific provider.
- */
-export async function loginWithProvider(provider: 'github' | 'google') {
-  await signIn(provider, { callbackUrl: '/dashboard' })
-}
-
 export async function loginWithTelegram(username: string) {
   const result = await signIn('telegram', {
     username,

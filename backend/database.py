@@ -48,7 +48,7 @@ async def init_db():
 
 
 async def _ensure_sqlite_schema(conn):
-    """Patch older local SQLite DBs created before OAuth/demo fields existed."""
+    """Patch older local SQLite DBs created before local auth/profile fields existed."""
     result = await conn.execute(text("PRAGMA table_info(users)"))
     existing = {row[1] for row in result.fetchall()}
     columns = {

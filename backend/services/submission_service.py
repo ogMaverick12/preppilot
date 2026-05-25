@@ -34,7 +34,7 @@ async def submit_solution_to_hermes(
     source: str = "dashboard",
 ) -> dict:
     """Review and persist a submitted solution through the PrepPilot Hermes layer."""
-    if session.status not in ("sent", "attempted"):
+    if session.status not in ("sent", "attempted", "solved"):
         raise ValueError("Session already resolved")
 
     if session.user_solution:
@@ -43,6 +43,8 @@ async def submit_solution_to_hermes(
     session.user_solution = user_solution
     session.language = language or "python"
     session.time_taken_minutes = time_taken_minutes
+    session.explanation_helpful = None
+    session.difficulty_felt = None
 
     user = await _get_user(session.user_id, db)
     if user and user.auth_provider == "demo":
@@ -172,7 +174,7 @@ async def _ensure_demo_skill_update(user_id: str, db: AsyncSession) -> bool:
         "version: 1.3-demo\n"
         f"last_improved: {datetime.utcnow().date().isoformat()}\n\n"
         "## purpose\n"
-        "Simulate visible Hermes learning for demo users without hosted model calls.\n\n"
+        "Simulate visible Hermes learning for demo users without external model calls.\n\n"
         "## review_process\n"
         "Prefer invariant-first feedback, edge-case nudges, and concise next steps.\n\n"
         "## improvement_log\n"

@@ -64,6 +64,7 @@ def _get_wsl_hermes_status() -> dict:
     """Check the local WSL Hermes CLI without making it required for reviews."""
     distro = os.getenv("HERMES_WSL_DISTRO", "Ubuntu")
     expected_path = os.getenv("HERMES_WSL_COMMAND", "/home/sreej/.local/bin/hermes")
+    timeout_seconds = float(os.getenv("HERMES_WSL_TIMEOUT_SECONDS", "30"))
     base = {
         "runtime": "wsl",
         "distro": distro,
@@ -82,18 +83,18 @@ def _get_wsl_hermes_status() -> dict:
                 "--",
                 "bash",
                 "-lc",
-                "command -v hermes && hermes --version 2>/dev/null",
+                "command -v hermes && timeout 12s hermes --version 2>/dev/null",
             ],
             capture_output=True,
             text=True,
-            timeout=5,
+            timeout=timeout_seconds,
             check=False,
         )
     except FileNotFoundError:
         base["message"] = "wsl.exe was not found on this machine."
         return base
     except subprocess.TimeoutExpired:
-        base["message"] = f"WSL Hermes check timed out for distro {distro}."
+        base["message"] = f"WSL Hermes check timed out for distro {distro} after {timeout_seconds:g}s."
         return base
     except Exception as exc:
         base["message"] = f"WSL Hermes check failed: {exc}"
