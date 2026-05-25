@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg-base:       #09090b;
+  --color-bg-surface:    #111113;
+  --color-bg-raised:     #1c1c1f;
+  --color-bg-overlay:    #27272a;
+  --color-bg-input:      #18181b;
+  --color-border-subtle: #27272a;
+  --color-border-default:#3f3f46;
+  --color-border-strong: #52525b;
+  --color-amber-500:     #f59e0b;
+  --color-amber-950:     #451a03;
+  --color-text-primary:  #fafafa;
+  --color-text-secondary:#a1a1aa;
+  --color-text-muted:    #71717a;
+  --glow-amber-sm: 0 0 8px rgba(245,158,11,0.3);
+  --glow-amber-md: 0 0 16px rgba(245,158,11,0.25), 0 0 32px rgba(245,158,11,0.1);
+  --glow-amber-lg: 0 0 24px rgba(245,158,11,0.4), 0 0 48px rgba(245,158,11,0.15);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg-base); }
+::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #52525b; }
+
+/* Selection */
+::selection { background: rgba(245,158,11,0.25); color: #fafafa; }
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Skill file / terminal code style */
+.terminal-block {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  background: #09090b;
+  border: 1px solid #27272a;
+  border-radius: 10px;
+  padding: 18px 20px;
+  color: #e4e4e7;
+  overflow-x: auto;
+}
+
+.terminal-block .line-new {
+  background: rgba(245,158,11,0.08);
+  border-left: 2px solid #f59e0b;
+  padding-left: 6px;
+  margin-left: -8px;
+  color: #fde68a;
+}
+
+.terminal-block .line-key   { color: #60a5fa; }
+.terminal-block .line-value { color: #e4e4e7; }
+.terminal-block .line-comment { color: #52525b; font-style: italic; }
+.terminal-block .line-header  { color: #f59e0b; font-weight: 600; }
+
+/* Skeleton loader */
+.skeleton {
+  background: linear-gradient(90deg, #27272a 25%, #3f3f46 50%, #27272a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 6px;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Fade-up animation utility */
+.fade-up {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.4s ease-out forwards;
+}
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Stagger delays */
+.delay-0  { animation-delay: 0ms; }
+.delay-1  { animation-delay: 80ms; }
+.delay-2  { animation-delay: 160ms; }
+.delay-3  { animation-delay: 240ms; }
+.delay-4  { animation-delay: 320ms; }
+.delay-5  { animation-delay: 400ms; }
+
+/* Pulse dot (alive indicator) */
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.35); opacity: 0.7; }
+}
+.pulse-dot { animation: pulseDot 2s ease-in-out infinite; }
+
+/* Score bar fill animation */
+@keyframes barFill {
+  from { width: 0%; }
+}
+.bar-fill { animation: barFill 0.7s ease-out forwards; }
+
+/* Radar chart draw animation handled via Recharts props */
+
+/* Amber glow utility */
+.glow-amber { box-shadow: var(--glow-amber-sm); }
+.glow-amber-md { box-shadow: var(--glow-amber-md); }
+
+.input-dark,
+.select-dark {
+  background: #18181b;
+  border: 1px solid #3f3f46;
+  border-radius: 8px;
+  color: #fafafa;
+  font-size: 13px;
+  outline: none;
+  padding: 8px 12px;
+  transition: border-color 120ms ease;
+}
+
+.input-dark:focus,
+.select-dark:focus {
+  border-color: #f59e0b;
+}
+
+.input-dark::placeholder {
+  color: #52525b;
+}
+
+.topic-pill {
+  border-radius: 6px;
+  display: inline-flex;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 5px 8px;
+}

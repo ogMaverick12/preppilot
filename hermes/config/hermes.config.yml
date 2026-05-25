@@ -1,0 +1,36 @@
+# hermes/config/hermes.config.yml
+# PrepPilot — Hermes Agent Configuration
+
+agent:
+  name: "PrepPilot Coach"
+  description: "A self-improving technical interview coaching agent"
+
+model:
+  # Optional hosted inference provider. If OPENROUTER_API_KEY is blank,
+  # the backend still runs Hermes skills with local heuristic fallbacks.
+  provider: openrouter
+  model: "nousresearch/hermes-3-llama-3.1-70b"
+
+memory:
+  provider: default
+  fts_enabled: true
+  cross_session: true
+
+user_modeling:
+  provider: honcho
+  enabled: true
+
+messaging:
+  platforms:
+    - telegram
+
+skills:
+  directory: "./skills"
+  auto_improve: true
+  improvement_threshold: 10  # improve skill after every 10 sessions
+
+crons:
+  - name: "weekly_report"
+    schedule: "0 9 * * 0"
+    script: "./scripts/weekly_report.py"
+    deliver: telegram

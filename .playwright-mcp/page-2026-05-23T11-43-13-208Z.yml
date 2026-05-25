@@ -1,0 +1,23 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - img "PrepPilot" [ref=e6]
+      - heading "Welcome to PrepPilot" [level=1] [ref=e7]
+      - paragraph [ref=e8]: Sign in to start your interview prep journey
+    - generic [ref=e9]:
+      - button "Continue with GitHub" [ref=e10] [cursor=pointer]:
+        - img [ref=e11]
+        - text: Continue with GitHub
+      - button "Continue with Google" [ref=e14] [cursor=pointer]:
+        - img [ref=e15]
+        - text: Continue with Google
+    - generic [ref=e22]: or use Telegram
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - generic [ref=e26]: "@"
+        - textbox "your_telegram_username" [ref=e27]
+      - button "Continue with Telegram" [ref=e28] [cursor=pointer]
+    - generic [ref=e31]: or
+    - button "Try Demo Mode" [ref=e33] [cursor=pointer]
+    - paragraph [ref=e34]: "First time? You can also start with the Telegram bot: @PrepPilotBot"

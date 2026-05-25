@@ -1,0 +1,180 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - link "PrepPilot PrepPilot" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "PrepPilot" [ref=e6]
+        - generic [ref=e7]: PrepPilot
+      - navigation [ref=e8]:
+        - link "Dashboard" [ref=e9] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e10]
+          - text: Dashboard
+        - link "Progress" [ref=e15] [cursor=pointer]:
+          - /url: /progress
+          - img [ref=e16]
+          - text: Progress
+        - link "Problems" [ref=e19] [cursor=pointer]:
+          - /url: /problems
+          - img [ref=e20]
+          - text: Problems
+        - link "Settings" [ref=e23] [cursor=pointer]:
+          - /url: /settings
+          - img [ref=e24]
+          - text: Settings
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - generic [ref=e31]: D
+            - generic [ref=e32]: Demo User
+          - button "Sign out" [ref=e33] [cursor=pointer]:
+            - img [ref=e34]
+        - generic [ref=e37]:
+          - generic [ref=e40]: Agent active
+          - generic [ref=e41]: v1.4
+        - generic [ref=e43]:
+          - img [ref=e44]
+          - generic [ref=e46]: Powered by Hermes Agent
+    - main [ref=e47]:
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - paragraph [ref=e51]: Saturday, May 23 · 5:23 PM
+            - heading "Good evening, Demo User." [level=1] [ref=e52]
+            - paragraph [ref=e53]: "Your focus today: tries"
+          - generic [ref=e54]:
+            - paragraph [ref=e55]: problem_selector
+            - button "v1.3-demo ↗" [ref=e56] [cursor=pointer]
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - generic [ref=e60]:
+              - generic [ref=e61]: This Week
+              - img [ref=e63]
+            - generic [ref=e66]:
+              - generic [ref=e67]: 3/6
+              - generic [ref=e68]: ↑ 3 vs last week
+            - paragraph [ref=e69]: problems solved
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - generic [ref=e72]: Average Score
+              - img [ref=e74]
+            - generic [ref=e77]:
+              - generic [ref=e78]: "78.4"
+              - generic [ref=e79]: ↓ 0 pts from week 1
+            - paragraph [ref=e80]: across all sessions
+          - generic [ref=e81]:
+            - generic [ref=e82]:
+              - generic [ref=e83]: Streak
+              - img [ref=e84]
+            - generic [ref=e86]:
+              - generic [ref=e87]: "6"
+              - generic [ref=e88]: days 🔥
+            - paragraph [ref=e89]: Keep it going!
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - heading "Today's Problem" [level=2] [ref=e96]
+            - generic [ref=e97]:
+              - generic [ref=e98]: Medium
+              - generic [ref=e99]: Tries
+            - generic [ref=e100]:
+              - heading "Design Add and Search Words" [level=3] [ref=e101]
+              - paragraph [ref=e102]:
+                - img [ref=e103]
+                - text: Est. 30-40 minutes
+            - generic [ref=e106]:
+              - paragraph [ref=e107]: Why today?
+              - paragraph [ref=e108]: Focusing on tries today.
+            - generic [ref=e109]: Sent at 11:46 AM · Awaiting your solution
+            - generic [ref=e111]:
+              - button "Solve in Dashboard" [ref=e112] [cursor=pointer]:
+                - img [ref=e113]
+                - text: Solve in Dashboard
+              - button "Different topic" [ref=e117] [cursor=pointer]:
+                - img [ref=e118]
+                - text: Different topic
+            - button "Open on Telegram" [ref=e123] [cursor=pointer]:
+              - img [ref=e124]
+              - text: Open on Telegram
+          - generic [ref=e128]:
+            - generic [ref=e129]:
+              - heading "Skill Evolution" [level=2] [ref=e131]
+              - generic [ref=e132]:
+                - generic [ref=e133]: v1.3-demo
+                - button "View full" [ref=e135] [cursor=pointer]:
+                  - text: View full
+                  - img [ref=e136]
+            - generic [ref=e140]:
+              - button "Problem Selector" [ref=e141] [cursor=pointer]
+              - button "Solution Reviewer" [ref=e142] [cursor=pointer]
+              - button "Coach Profiler" [ref=e143] [cursor=pointer]
+            - generic [ref=e144]:
+              - generic [ref=e150] [cursor=pointer]:
+                - generic [ref=e152]:
+                  - generic [ref=e153]: v1.3-demo
+                  - generic [ref=e154]: — May 21, 2026
+                - paragraph [ref=e155]: "v1.3-demo: Demo helpfulness feedback reinforced invariant-first coaching."
+                - generic [ref=e156]:
+                  - img [ref=e157]
+                  - generic [ref=e159]: "Demo feedback for user demo-user: Demo feedback for user demo-user"
+              - generic [ref=e165] [cursor=pointer]:
+                - generic [ref=e166]:
+                  - generic [ref=e167]:
+                    - generic [ref=e168]: v1.1-demo
+                    - generic [ref=e169]: — May 21, 2026
+                  - img [ref=e170]
+                - paragraph [ref=e172]: "1.1-demo: Detected explanation preferences from simulated helpfulness ratings."
+                - generic [ref=e173]:
+                  - img [ref=e174]
+                  - generic [ref=e176]: "Demo simulation seed: Demo simulation seed"
+              - generic [ref=e182] [cursor=pointer]:
+                - generic [ref=e183]:
+                  - generic [ref=e184]:
+                    - generic [ref=e185]: v1.2-demo
+                    - generic [ref=e186]: — May 21, 2026
+                  - img [ref=e187]
+                - paragraph [ref=e189]: "1.2-demo: Added invariant-first feedback for dashboard submissions."
+                - generic [ref=e190]:
+                  - img [ref=e191]
+                  - generic [ref=e193]: "Demo simulation seed: Demo simulation seed"
+              - generic [ref=e199] [cursor=pointer]:
+                - generic [ref=e200]:
+                  - generic [ref=e201]:
+                    - generic [ref=e202]: v1.2-demo
+                    - generic [ref=e203]: — May 21, 2026
+                  - img [ref=e204]
+                - paragraph [ref=e206]: "1.2-demo: Added career-track weighting and stale-topic recovery."
+                - generic [ref=e207]:
+                  - img [ref=e208]
+                  - generic [ref=e210]: "Demo simulation seed: Demo simulation seed"
+              - generic [ref=e216] [cursor=pointer]:
+                - generic [ref=e217]:
+                  - generic [ref=e218]:
+                    - generic [ref=e219]: v1.0
+                    - generic [ref=e220]: — May 21, 2026
+                  - img [ref=e221]
+                - paragraph [ref=e223]: "v1.0: Initial version loaded from disk."
+                - generic [ref=e224]:
+                  - img [ref=e225]
+                  - generic [ref=e227]: "System initialization: System initialization"
+              - generic [ref=e233] [cursor=pointer]:
+                - generic [ref=e234]:
+                  - generic [ref=e235]:
+                    - generic [ref=e236]: v1.0
+                    - generic [ref=e237]: — May 21, 2026
+                  - img [ref=e238]
+                - paragraph [ref=e240]: "v1.0: Initial version loaded from disk."
+                - generic [ref=e241]:
+                  - img [ref=e242]
+                  - generic [ref=e244]: "System initialization: System initialization"
+              - generic [ref=e249] [cursor=pointer]:
+                - generic [ref=e250]:
+                  - generic [ref=e251]:
+                    - generic [ref=e252]: v1.0
+                    - generic [ref=e253]: — May 21, 2026
+                  - img [ref=e254]
+                - paragraph [ref=e256]: "v1.0: Initial version loaded from disk."
+                - generic [ref=e257]:
+                  - img [ref=e258]
+                  - generic [ref=e260]: "System initialization: System initialization"
+            - button "View full skill file & diff →" [ref=e262] [cursor=pointer]
+  - alert [ref=e263]
